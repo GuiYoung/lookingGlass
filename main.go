@@ -1,4 +1,4 @@
-package lookingGlass
+package main
 
 import "lookingGlass/accessibleLG"
 
