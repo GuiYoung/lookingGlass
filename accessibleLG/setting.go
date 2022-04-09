@@ -1,4 +1,4 @@
-package main
+package accessibleLG
 
 import "gopkg.in/ini.v1"
 

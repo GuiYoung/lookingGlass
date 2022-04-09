@@ -1,4 +1,4 @@
-package main
+package accessibleLG
 
 import (
 	"bufio"
@@ -118,7 +118,7 @@ func getAllInfo() []byte {
 	return body
 }
 
-func main() {
+func GetAccessibleURL() {
 	if err := InitDb(); err != nil {
 		panic(err)
 	}

@@ -1,4 +1,4 @@
-package main
+package accessibleLG
 
 import "gorm.io/gorm"
 

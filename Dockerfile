@@ -15,4 +15,4 @@ RUN go build -o /lookingGlass
 
 EXPOSE 9003
 
-CMD [ "/beianAPI" ]
+CMD [ "/lookingGlass" ]
