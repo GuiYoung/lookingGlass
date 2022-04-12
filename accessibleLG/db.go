@@ -24,7 +24,7 @@ func InitDb() (err error) {
 	}
 
 	// create table
-	_ = Db.AutoMigrate(&lg{})
+	_ = Db.AutoMigrate(&accessibleLG{})
 
 	sqlDB, _ := Db.DB()
 

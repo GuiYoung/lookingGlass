@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"strings"
 )
 
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -130,11 +131,10 @@ func GetAccessibleURL() {
 		if status, err = checkAccessibleLG(url); err != nil {
 			continue
 		}
-		if status != http.StatusOK {
-			continue
-		}
-		if err = InsertLgUrl(&lg{LgUrl: url}); err != nil {
-			continue
-		}
+
+		t := strings.Split(url, "//")[1]
+		domainName := strings.Split(t, "/")[0]
+
+		appendISPAS(domainName, status, url)
 	}
 }
