@@ -6,7 +6,7 @@ type accessibleLG struct {
 	gorm.Model
 	LgUrl    string `gorm:"lg_url"`
 	LgIsp    string `json:"isp" gorm:"lg_isp"`
-	LgAS     string `json:"as" gorm:"lg_AS"`
+	LgAS     int    `json:"as" gorm:"lg_AS"`
 	LgStatus int    `gorm:"lg_status"`
 }
 
